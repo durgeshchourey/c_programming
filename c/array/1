@@ -1,0 +1,35 @@
+#include<stdio.h>
+
+int main()
+{
+   int ar[10];
+   int len;
+   int greatest = -100000;
+   int lowest = 100000;
+
+   printf("Enter the array elements should be less than 10\n");
+   scanf("%d\n",&len);
+   if(len > 10)
+   {
+     printf("Invalid Length");
+     return;
+   }
+   for(int i=0;i < len; i++)
+   {
+     printf("Enter a number: ");
+     scanf("%d\n",&ar[i]);
+   }
+
+   for(int i=0;i<len;i++)
+   {
+     if(greatest < ar[i])
+	 greatest = ar[i];
+     if(lowest > ar[i])
+	 lowest = ar[i];
+   }
+
+   printf("Greatest = %d\n Lowest = %d\n",greatest,lowest);
+
+
+  return 0;
+}
